@@ -9,6 +9,32 @@
     <title>Intro To Javascript Day: </title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <h1>Not Logged In</h1>
+    <input type="number">
+    <input type="password">
+    <button>Login</button>
+    <button>Sign Up</button>
+
+
+    <script>
+        const h1 = document.querySelector('h1');
+        const inputs = document.querySelectorAll('input');
+        const usernameInput = inputs[0];
+        const passwordInput = inputs[1];
+        const loginButton = document.querySelectorAll('button');
+        const signUpButton = document.querySelectorAll('button');
+        console.log('button', loginButton);
+
+        loginButton.addEventListener('click', function() {
+            console.log(usernameInput.value);
+            h1.innerHTML = usernameInput.value;
+        });
+        signUpButton.addEventListener('click', function() {
+            h1.innerHTML = 'Not Logged In'
+        });
+
+
+
+    </script>
 </body>
 </html>
